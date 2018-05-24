@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.lafengnan</groupId>
+    <artifactId>hive-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <organization>
+        <name>chris pan</name>
+        <url>https://gitbook.com/lafengnan</url>
+    </organization>
+
+    <name>hive</name>
+    <description>Template backend service framework based on spring boot</description>
+    <modules>
+        <module>hive-core</module>
+        <module>hive-client</module>
+        <module>hive-server</module>
+    </modules>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>lafengnan</id>
+            <name>chris pan</name>
+            <email>lafengnan@gmail.com</email>
+            <url>https://github.com/lafengnan</url>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <properties>
+                <picUrl/>
+            </properties>
+        </developer>
+    </developers>
+    <!--<scm>-->
+        <!--<connection>scm:git:https://github.com/Erudika/para.git</connection>-->
+        <!--<developerConnection>scm:git:git@github.com:Erudika/para.git</developerConnection>-->
+        <!--<url>https://github.com/Erudika/para</url>-->
+        <!--<tag>HEAD</tag>-->
+    <!--</scm>-->
+
+    <issueManagement>
+        <system>GitHub</system>
+        <!--<url>https://github.com/Erudika/para/issues</url>-->
+    </issueManagement>
+
+    <ciManagement>
+        <system>Travis CI</system>
+        <!--<url>https://travis-ci.org/Erudika/para</url>-->
+    </ciManagement>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.2.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <slf4jVer>1.7.25</slf4jVer>
+		<logbackVer>1.2.3</logbackVer>
+        <jacksonVer>2.9.4</jacksonVer>
+        <flexmarkVer>0.32.14</flexmarkVer>
+        <springVer>5.0.4.RELEASE</springVer>
+        <springBootVer>2.0.2.RELEASE</springBootVer>
+    </properties>
+
+    <dependencies>
+        <!-- TESTING -->
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>2.11.0</version>
+			<scope>test</scope>
+		</dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.14.3</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-cache</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.shell</groupId>
+            <artifactId>spring-shell-starter</artifactId>
+            <version>2.0.0.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.restdocs</groupId>
+            <artifactId>spring-restdocs-mockmvc</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!--<distributionManagement>-->
+		<!--<snapshotRepository>-->
+			<!--<id>ossrh</id>-->
+			<!--<url>http://oss.sonatype.org/content/repositories/snapshots</url>-->
+		<!--</snapshotRepository>-->
+		<!--<repository>-->
+			<!--<id>ossrh</id>-->
+			<!--<url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>-->
+		<!--</repository>-->
+	<!--</distributionManagement>-->
+
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>nexus-aliyun</id>
+            <name>Nexus aliyun</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+        </repository>
+        <repository>
+            <id>osc</id>
+            <name>Nexus osc</name>
+            <url>http://maven.oschina.net/content/groups/public/</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>osc</id>
+            <url>http://maven.oschina.net/content/groups/public/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+
+</project>
